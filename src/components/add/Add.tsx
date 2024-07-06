@@ -75,7 +75,7 @@ const Add = (props: Props) => {
 
       try {
         const response = await axios.post(
-          "http://104.245.34.253:3300/api/device/add-device/",
+          "https://xpac.online/api/device/add-device/",
           formData,
           { headers }
         );
@@ -122,7 +122,7 @@ const Add = (props: Props) => {
 
       try {
         const response = await axios.post(
-          "http://104.245.34.253:3300/api/users/register",
+          "https://xpac.online/api/users/register",
           formData,
           { headers }
         );

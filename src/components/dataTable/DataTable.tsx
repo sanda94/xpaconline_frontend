@@ -62,7 +62,7 @@ const DataTable = (props: Props) => {
     if (userConfirmed) {
       if (imageUrl) {
         await axios.delete(
-          "http://104.245.34.253:3300/api/files/delete/" + imageUrl
+          "https://xpac.online/api/files/delete/" + imageUrl
         );
       }
 
@@ -76,7 +76,7 @@ const DataTable = (props: Props) => {
 
           try {
             const response = await axios.delete(
-              "http://104.245.34.253:3300/api/rules/delete/" + id,
+              "https://xpac.online/api/rules/delete/" + id,
               { headers }
             );
 
@@ -101,7 +101,7 @@ const DataTable = (props: Props) => {
 
           try {
             const response = await axios.delete(
-              "http://104.245.34.253:3300/api/device/delete-device/" + id,
+              "https://xpac.online/api/device/delete-device/" + id,
               { headers }
             );
 
@@ -126,7 +126,7 @@ const DataTable = (props: Props) => {
 
           try {
             const response = await axios.delete(
-              "http://104.245.34.253:3300/api/users/delete/" + id,
+              "https://xpac.online/api/users/delete/" + id,
               { headers }
             );
 

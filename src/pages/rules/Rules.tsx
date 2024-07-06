@@ -107,7 +107,7 @@ const Rules = () => {
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/rules/all",
+          "https://xpac.online/api/rules/all",
           { headers }
         );
         console.log(response.data.rules);

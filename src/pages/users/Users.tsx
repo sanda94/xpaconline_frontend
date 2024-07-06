@@ -23,7 +23,7 @@ const columns: GridColDef[] = [
         <img
           src={
             params.row.imageUrl
-              ? `http://104.245.34.253:3300/uploads/${params.row.imageUrl}`
+              ? `https://xpac.online/uploads/${params.row.imageUrl}`
               : `/noavatar.png`
           }
           alt="Profile Picture"
@@ -128,7 +128,7 @@ const Users = () => {
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/users/all",
+          "https://xpac.online/api/users/all",
           { headers }
         );
         console.log(response.data.users);

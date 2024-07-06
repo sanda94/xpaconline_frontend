@@ -132,7 +132,7 @@ const DeviceFormPopup: React.FC<DeviceFormPopupProps> = ({
 
       try {
         const response = await axios.post(
-          "http://104.245.34.253:3300/api/device/add-device/",
+          "https://xpac.online/api/device/add-device/",
           {
             title: InputData.title,
             assignedProduct: InputData.assignedProduct,
@@ -180,7 +180,7 @@ const DeviceFormPopup: React.FC<DeviceFormPopupProps> = ({
 
       try {
         const response = await axios.put(
-          "http://104.245.34.253:3300/api/device/update-device/" + params.id,
+          "https://xpac.online/api/device/update-device/" + params.id,
           {
             title: InputData.title,
             assignedProduct: InputData.assignedProduct,
@@ -224,7 +224,7 @@ const DeviceFormPopup: React.FC<DeviceFormPopupProps> = ({
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/device/item_details/one/" + params.id,
+          "https://xpac.online/api/device/item_details/one/" + params.id,
           { headers }
         );
         if (response.data.status) {
@@ -256,7 +256,7 @@ const DeviceFormPopup: React.FC<DeviceFormPopupProps> = ({
     try {
       // Send formData to backend using axios or any other HTTP client
       const response = await axios.post(
-        "http://104.245.34.253:3300/api/files/save",
+        "https://xpac.online/api/files/save",
         formData,
         {
           headers: {
@@ -281,7 +281,7 @@ const DeviceFormPopup: React.FC<DeviceFormPopupProps> = ({
     try {
       // Send formData to backend using axios or any other HTTP client
       const response = await axios.delete(
-        "http://104.245.34.253:3300/api/files/delete/" + imageUrl
+        "https://xpac.online/api/files/delete/" + imageUrl
       );
 
       if (response.data.status) {

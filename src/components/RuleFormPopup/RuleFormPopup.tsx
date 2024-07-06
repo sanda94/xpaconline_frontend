@@ -87,7 +87,7 @@ const RuleFormPopup: React.FC<RuleFormPopupProps> = ({
       }
       try {
         const response = await axios.post(
-          "http://104.245.34.253:3300/api/rules/create/",
+          "https://xpac.online/api/rules/create/",
           InputData,
           { headers }
         );
@@ -122,7 +122,7 @@ const RuleFormPopup: React.FC<RuleFormPopupProps> = ({
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/users/all/nonadmin",
+          "https://xpac.online/api/users/all/nonadmin",
           { headers }
         );
         console.log(response.data.nonAdminUsers);
@@ -145,7 +145,7 @@ const RuleFormPopup: React.FC<RuleFormPopupProps> = ({
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/device/all",
+          "https://xpac.online/api/device/all",
           { headers }
         );
         console.log(response.data.devices);
@@ -167,7 +167,7 @@ const RuleFormPopup: React.FC<RuleFormPopupProps> = ({
 
       try {
         const response = await axios.put(
-          "http://104.245.34.253:3300/api/rules/update/" + ruleId,
+          "https://xpac.online/api/rules/update/" + ruleId,
           InputData,
           { headers }
         );
@@ -202,7 +202,7 @@ const RuleFormPopup: React.FC<RuleFormPopupProps> = ({
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/rules/one/" + ruleId,
+          "https://xpac.online/api/rules/one/" + ruleId,
           { headers }
         );
         if (response.data.status) {

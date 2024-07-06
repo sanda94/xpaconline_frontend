@@ -72,7 +72,7 @@ const Home = () => {
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/summary/get-device-count",
+          "https://xpac.online/api/summary/get-device-count",
           { headers }
         );
         SetDeviceCountData(response.data.data);
@@ -94,7 +94,7 @@ const Home = () => {
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/summary/get-customer-device-count",
+          "https://xpac.online/api/summary/get-customer-device-count",
           { headers }
         );
         console.log(response.data.data);
@@ -132,7 +132,7 @@ const Home = () => {
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/summary/count",
+          "https://xpac.online/api/summary/count",
           { headers }
         );
         console.log(response.data.data);

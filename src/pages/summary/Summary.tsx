@@ -50,14 +50,14 @@ const Summary = () => {
           storedUser.userType == "moderator"
         ) {
           const response = await axios.get(
-            "http://104.245.34.253:3300/api/device/all",
+            "https://xpac.online/api/device/all",
             { headers }
           );
           console.log(response.data.devices);
           SetDevicesData(response.data.devices);
         } else {
           const response = await axios.get(
-            `http://104.245.34.253:3300/api/device/user/all`,
+            `https://xpac.online/api/device/user/all`,
             { headers }
           );
           console.log(response.data.devices);
@@ -80,13 +80,13 @@ const Summary = () => {
 
       try {
         const response = await axios.post(
-          "http://104.245.34.253:3300/api/excel/devices",
+          "https://xpac.online/api/excel/devices",
           data,
           { headers }
         );
         if (response.data.status) {
           window.open(
-            "http://104.245.34.253:3300/downloads/all_devices_data.xlsx",
+            "https://xpac.online/downloads/all_devices_data.xlsx",
             "_blank"
           );
         }

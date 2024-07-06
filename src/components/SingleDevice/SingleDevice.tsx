@@ -117,7 +117,7 @@ const SingleDevice = () => {
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/device/one/" + params.id,
+          "https://xpac.online/api/device/one/" + params.id,
           { headers }
         );
         console.log("first");
@@ -141,7 +141,7 @@ const SingleDevice = () => {
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/device/all/" +
+          "https://xpac.online/api/device/all/" +
             params.id +
             "?period=" +
             ChartType,
@@ -193,25 +193,25 @@ const SingleDevice = () => {
       try {
         if (type == "single") {
           const response = await axios.post(
-            "http://104.245.34.253:3300/api/excel/device",
+            "https://xpac.online/api/excel/device",
             data,
             { headers }
           );
           if (response.data.status) {
             window.open(
-              "http://104.245.34.253:3300/downloads/device_data.xlsx",
+              "https://xpac.online/downloads/device_data.xlsx",
               "_blank"
             );
           }
         } else {
           const response = await axios.post(
-            "http://104.245.34.253:3300/api/excel/current_device_all",
+            "https://xpac.online/api/excel/current_device_all",
             data,
             { headers }
           );
           if (response.data.status) {
             window.open(
-              "http://104.245.34.253:3300/downloads/all_data_of_current_device.xlsx",
+              "https://xpac.online/downloads/all_data_of_current_device.xlsx",
               "_blank"
             );
           }
@@ -236,7 +236,7 @@ const SingleDevice = () => {
                 }}
                 src={
                   DeviceRecentData[0].imageUrl
-                    ? `http://104.245.34.253:3300/uploads/${DeviceRecentData[0].imageUrl}`
+                    ? `https://xpac.online/uploads/${DeviceRecentData[0].imageUrl}`
                     : `/scale.svg`
                 }
                 alt="Device Picture"
@@ -460,7 +460,7 @@ const SingleDevice = () => {
           onClose={closeImgPopup}
           imageSrc={
             DeviceRecentData[0].imageUrl
-              ? `http://104.245.34.253:3300/uploads/${DeviceRecentData[0].imageUrl}`
+              ? `https://xpac.online/uploads/${DeviceRecentData[0].imageUrl}`
               : `/scale.svg`
           }
         />

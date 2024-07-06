@@ -81,7 +81,7 @@ const Single = () => {
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/users/one/" + params.id,
+          "https://xpac.online/api/users/one/" + params.id,
           { headers }
         );
         console.log(response.data.user);
@@ -105,7 +105,7 @@ const Single = () => {
                   style={{ cursor: "pointer" }}
                   src={
                     UserData.imageUrl
-                      ? `http://104.245.34.253:3300/uploads/${UserData.imageUrl}`
+                      ? `https://xpac.online/uploads/${UserData.imageUrl}`
                       : `/noavatar.png`
                   }
                   alt="Profile Picture"
@@ -176,7 +176,7 @@ const Single = () => {
         onClose={closeImgPopup}
         imageSrc={
           UserData.imageUrl
-            ? `http://104.245.34.253:3300/uploads/${UserData.imageUrl}`
+            ? `https://xpac.online/uploads/${UserData.imageUrl}`
             : `/noavatar.png`
         }
       />

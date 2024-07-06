@@ -18,7 +18,7 @@ const columns: GridColDef[] = [
         <img
           src={
             params.row.imageUrl
-              ? `http://104.245.34.253:3300/uploads/${params.row.imageUrl}`
+              ? `https://xpac.online/uploads/${params.row.imageUrl}`
               : `/scaless.svg`
           }
           alt="Device Picture"
@@ -107,7 +107,7 @@ const Products = () => {
           storedUser.userType == "moderator"
         ) {
           const response = await axios.get(
-            "http://104.245.34.253:3300/api/device/all",
+            "https://xpac.online/api/device/all",
             { headers }
           );
           console.log(response.data.devices);
@@ -115,7 +115,7 @@ const Products = () => {
         } else {
           console.log(UserType);
           const response = await axios.get(
-            `http://104.245.34.253:3300/api/device/user/all`,
+            `https://xpac.online/api/device/user/all`,
             { headers }
           );
           console.log(response.data.devices);

@@ -45,7 +45,7 @@ export default function Login() {
     }
     try {
       const response = await axios.post(
-        "http://104.245.34.253:3300/api/users/login",
+        "https://xpac.online/api/users/login",
         {
           emailAddress: Email,
           password: Password,

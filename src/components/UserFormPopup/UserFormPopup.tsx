@@ -149,7 +149,7 @@ const UserFormPopup: React.FC<UserFormPopupProps> = ({
 
       try {
         const response = await axios.post(
-          "http://104.245.34.253:3300/api/users/register",
+          "https://xpac.online/api/users/register",
           {
             fullName: InputData.fullName,
             emailAddress: InputData.emailAddress,
@@ -195,7 +195,7 @@ const UserFormPopup: React.FC<UserFormPopupProps> = ({
 
       try {
         const response = await axios.put(
-          "http://104.245.34.253:3300/api/users/update/secure/" + params.id,
+          "https://xpac.online/api/users/update/secure/" + params.id,
           {
             fullName: InputData.fullName,
             emailAddress: InputData.emailAddress,
@@ -243,7 +243,7 @@ const UserFormPopup: React.FC<UserFormPopupProps> = ({
 
       try {
         const response = await axios.get(
-          "http://104.245.34.253:3300/api/users/one/" + params.id,
+          "https://xpac.online/api/users/one/" + params.id,
           { headers }
         );
         if (response.data.status) {
@@ -272,7 +272,7 @@ const UserFormPopup: React.FC<UserFormPopupProps> = ({
     try {
       // Send formData to backend using axios or any other HTTP client
       const response = await axios.post(
-        "http://104.245.34.253:3300/api/files/save",
+        "https://xpac.online/api/files/save",
         formData,
         {
           headers: {
@@ -297,7 +297,7 @@ const UserFormPopup: React.FC<UserFormPopupProps> = ({
     try {
       // Send formData to backend using axios or any other HTTP client
       const response = await axios.delete(
-        "http://104.245.34.253:3300/api/files/delete/" + imageUrl
+        "https://xpac.online/api/files/delete/" + imageUrl
       );
 
       if (response.data.status) {
