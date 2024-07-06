@@ -1,0 +1,37 @@
+// UserFormPopup.scss
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(42, 52, 71, 0.5); // Background color
+  z-index: 999;
+
+  &.open {
+    display: flex;
+  }
+
+  .popup-content {
+    max-width: 800px;
+    background-color: #2a3447; // Background color
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+    .img-close-btn {
+      color: #2a3447;
+      border: 1px solid #2a3447;
+      border-radius: 4px;
+      padding: 8px 30px;
+      margin: 4px 0;
+      cursor: pointer;
+    }
+  }
+}
