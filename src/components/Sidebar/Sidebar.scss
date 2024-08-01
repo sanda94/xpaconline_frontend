@@ -1,0 +1,48 @@
+// sidebar.scss
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .toggleButton {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    cursor: pointer;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #007bff;
+  }
+  
+  .contentContainer.shifted {
+    margin-left: 200px; /* Adjust this value based on your sidebar width */
+    transition: margin-left 0.3s ease-in-out;
+  }
+  

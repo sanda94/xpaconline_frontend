@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Home from "./pages/home/Home";
 import Summary from "./pages/summary/Summary";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -18,14 +19,32 @@ const queryClient = new QueryClient();
 
 function App() {
   const Layout = () => {
-    const { themeColors } = useTheme();
+    const { theme, themeColors } = useTheme();
+    const [MenuSection, SetMenuSection] = useState(true);
+    console.log(MenuSection);
     return (
       <div className="main" style={{ backgroundColor: themeColors.mainBg }}>
         <Navbar />
         <div className="container">
-          <div className="menuContainer">
-            <Menu />
+          <div
+            style={{
+              position: "absolute",
+              left: "200px",
+              top: "35px",
+              cursor: "pointer",
+            }}
+            onClick={() => SetMenuSection(!MenuSection)}
+          >
+            <img
+              src={theme == "light" ? "/ham_black.svg" : "/ham_white.svg"}
+              style={{ width: "20px" }}
+            />
           </div>
+          {MenuSection ? (
+            <div className="menuContainer" style={{ position: "relative" }}>
+              <Menu />
+            </div>
+          ) : null}
           <div className="contentContainer">
             <QueryClientProvider client={queryClient}>
               <Outlet />

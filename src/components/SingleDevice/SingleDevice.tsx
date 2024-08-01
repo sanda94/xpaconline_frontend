@@ -68,6 +68,9 @@ const SingleDevice = () => {
     SetChartType(event.target.value as string);
   };
 
+  // Local storage
+  const storedUserString: any = localStorage.getItem("user");
+
   useEffect(() => {
     fetchChartData();
 
@@ -299,30 +302,46 @@ const SingleDevice = () => {
                     {DeviceRecentData[0].userId}
                   </span>
                 </div> */}
-                <div className="item">
-                  <span className="itemTitle">Created Date : </span>
-                  <span className="itemValue">
-                    {separateDateAndTime(DeviceRecentData[0].createdAt)?.date}
-                  </span>
-                </div>
-                <div className="item">
-                  <span className="itemTitle">Created Time : </span>
-                  <span className="itemValue">
-                    {separateDateAndTime(DeviceRecentData[0].createdAt)?.time}
-                  </span>
-                </div>
-                <div className="item">
-                  <span className="itemTitle">Updated Date : </span>
-                  <span className="itemValue">
-                    {separateDateAndTime(DeviceRecentData[0].updatedAt)?.date}
-                  </span>
-                </div>
-                <div className="item">
-                  <span className="itemTitle">Updated Time : </span>
-                  <span className="itemValue">
-                    {separateDateAndTime(DeviceRecentData[0].updatedAt)?.time}
-                  </span>
-                </div>
+                {JSON.parse(storedUserString).userType != "customer" ? (
+                  <>
+                    <div className="item">
+                      <span className="itemTitle">Created Date : </span>
+                      <span className="itemValue">
+                        {
+                          separateDateAndTime(DeviceRecentData[0].createdAt)
+                            ?.date
+                        }
+                      </span>
+                    </div>
+                    <div className="item">
+                      <span className="itemTitle">Created Time : </span>
+                      <span className="itemValue">
+                        {
+                          separateDateAndTime(DeviceRecentData[0].createdAt)
+                            ?.time
+                        }
+                      </span>
+                    </div>
+                    <div className="item">
+                      <span className="itemTitle">Updated Date : </span>
+                      <span className="itemValue">
+                        {
+                          separateDateAndTime(DeviceRecentData[0].updatedAt)
+                            ?.date
+                        }
+                      </span>
+                    </div>
+                    <div className="item">
+                      <span className="itemTitle">Updated Time : </span>
+                      <span className="itemValue">
+                        {
+                          separateDateAndTime(DeviceRecentData[0].updatedAt)
+                            ?.time
+                        }
+                      </span>
+                    </div>
+                  </>
+                ) : null}
               </div>
               <div
                 style={{

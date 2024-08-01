@@ -75,6 +75,13 @@ const Products = () => {
     setIsFormOpen(false);
   };
 
+  const filteredColumns = columns.filter(
+    (column) => column.field !== "createdAt" && column.field !== "updatedAt"
+  );
+
+  // Local storage
+  const storedUserString: any = localStorage.getItem("user");
+
   useEffect(() => {
     fetchDevices();
     const storedUserString = localStorage.getItem("user");
@@ -145,7 +152,11 @@ const Products = () => {
         <DataTable
           slug="products"
           statusChange={updateStatus}
-          columns={columns}
+          columns={
+            JSON.parse(storedUserString).userType == "customer"
+              ? filteredColumns
+              : columns
+          }
           rows={DevicesData}
         />
       ) : (

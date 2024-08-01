@@ -146,7 +146,7 @@ export default function Login() {
                   color: themeColors.mainBg,
                 }}
               >
-                Copyright &copy; XPAC.online
+                Copyright &copy; Xpac Online
               </p>
             </Box>
           </Box>
