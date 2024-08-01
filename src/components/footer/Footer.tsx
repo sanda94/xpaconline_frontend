@@ -12,7 +12,6 @@ const Footer = () => {
         left: 0,
         width: "100%",
         color: themeColors.mainColor,
-        backgroundColor: themeColors.backgroundColor,
       }}
     >
       <span style={{ fontWeight: "normal" }}>© XPAC Technologies Pte Ltd</span>
