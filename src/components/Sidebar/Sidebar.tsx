@@ -1,11 +1,17 @@
-import { Link } from "react-router-dom";
-import "./sidebar.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './sidebar.scss';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+interface SidebarProps {
+  isOpen: boolean;
+  toggleSidebar: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
-    <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
+    <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
       <button onClick={toggleSidebar} className="toggleButton">
-        {isOpen ? "Close" : "Open"} Menu
+        {isOpen ? 'Close' : 'Open'} Menu
       </button>
       {isOpen && (
         <ul>
