@@ -19,14 +19,20 @@ const Navbar = () => {
         <img
           src={theme == "dark" ? "/logo.svg" : "/logodark.svg"}
           alt=""
-          style={{ width: "50px" }}
+          style={{ width: "80px" }}
         />
         <span style={{ color: themeColors.mainColor }}>XPAC</span>
       </div>
-
-      <span style={{ color: themeColors.mainColor, fontWeight: "bold" }}>
-        © XPAC Technologies Pte Ltd
+      <div className="logo">
+        <img
+          src={theme == "dark" ? "/xpac.svg" : "/xpac.svg"}
+          alt=""
+          style={{ width: "120px" }}
+        />
+      <span style={{ color: themeColors.mainColor, fontWeight: "bold", fontSize: "25px"}}>
+        XPAC Technologies Pte Ltd
       </span>
+      </div>
       <div className="icons">
         {/* <img src="/search.svg" alt="" className="icon" />
         <img src="/app.svg" alt="" className="icon" />

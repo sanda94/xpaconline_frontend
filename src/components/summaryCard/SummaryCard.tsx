@@ -52,7 +52,7 @@ const SummaryCard = ({
           Units={""}
           InnerColor={"#f78f5e"}
           TextColor={"#000000"}
-          Icon={"/items1.svg"}
+          Icon={""}
           Title={"Item Count"}
         />
         <div
